@@ -7,9 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "nodemon http.js",
+    "dev": "nodemon 0.index.js",
     "dev2": "node --watch ./express.js",
-    "dev3": "nodemon express.js",
+    "dev3": "nodemon express.js", 
     "test": "jest"
   },
   "author": "",

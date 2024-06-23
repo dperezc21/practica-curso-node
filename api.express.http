@@ -3,3 +3,6 @@ GET http://localhost:3000
 
 ###
 GET http://localhost:3000/eee
+
+### create user
+GET http://localhost:3000/users/create

@@ -2,20 +2,22 @@
 // .mjs para utilizar ES Modules
 // cjs para utilizar CommonJS
 
-function f1() {
-    console.log('f1');
-}
+const express = require('express');
+const app = express();
 
-function f2() {
-    console.log('f2');
-}
+const users = require('./routes/user');
 
-function main() {
-    console.log('main');
-    
-    setTimeout(f1, 100);
-    console.log('end')
-    f2();
-}
+app.use('/users', users);
 
-main();
+app.get('/', (req, res) => {
+    res.send('pagina inicial!!!!');
+})
+
+app.use((request, response) => {
+    response.status(404).send("pagina no encontrada");
+});
+
+
+app.listen(3000, () => {
+    console.log('listening in the port http://localhost:3000');
+})
