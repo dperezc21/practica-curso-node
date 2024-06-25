@@ -7,9 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "nodemon 0.index.js",
+    "dev": "nodemon ./mysql/index.js",
     "dev2": "node --watch ./express.js",
-    "dev3": "nodemon express.js", 
+    "dev3": "nodemon express.js",
     "test": "jest"
   },
   "author": "",
@@ -19,6 +19,7 @@
     "nodemon": "^3.1.3"
   },
   "dependencies": {
-    "express": "4.19.2"
+    "express": "4.19.2",
+    "mysql": "^2.18.1"
   }
 }
